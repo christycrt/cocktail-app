@@ -8,7 +8,7 @@ function Cocktail({ cocktailList }) {
           <div className="row">
             {cocktailList.map((item, key) => {
               return (
-                <div key={key} className="col-4">
+                <div key={key} className="col-12 col-lg-4">
                   <CocktailItem item={item} />
                 </div>
               );

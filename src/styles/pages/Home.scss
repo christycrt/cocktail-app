@@ -4,12 +4,16 @@
     margin: 100px 0;
 
     .search-form {
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
         background-color: $mainWhite;
         box-shadow: $lightShadow;
         padding: 35px 40px;
         border-radius: 5px;
+
+        @media only screen and (min-width: 992px) {
+            width: 50%;
+        }
 
         .form-text {
             label {
