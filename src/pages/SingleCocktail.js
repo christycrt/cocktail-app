@@ -14,16 +14,18 @@ function SingleCocktail() {
     axios
       .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then(function (response) {
-        let ingredients = [];
-        for (let index = 0; index < 15; index++) {
-          let ingredient =
-            response.data.drinks[0]["strIngredient" + (index + 1)];
-          if (ingredient) {
-            ingredients.push(ingredient);
+        if (details) {
+          let ingredients = [];
+          for (let index = 0; index < 15; index++) {
+            let ingredient =
+              response.data.drinks[0]["strIngredient" + (index + 1)];
+            if (ingredient) {
+              ingredients.push(ingredient);
+            }
           }
+          response.data.drinks[0].strIngredients = ingredients.join(", ");
+          setDetails(response.data.drinks[0]);
         }
-        response.data.drinks[0].strIngredients = ingredients.join(", ");
-        setDetails(response.data.drinks[0]);
         setLoading(false);
       });
   }, []);
