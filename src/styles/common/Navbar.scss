@@ -1,0 +1,37 @@
+#navbar {
+    height: 80px;
+    background-color: $mainWhite;
+    box-shadow: $darkShadow;
+
+    .nav-lists {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85vw;
+        margin: 0 auto;
+        height: 100%;
+
+        .logo {
+            height: 18px;
+        }
+
+        .nav-links {
+            margin-bottom: 0;
+
+            li {
+                list-style-type: none;
+                a {
+                    text-decoration: none;
+                    color: #222222;
+
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+                display: inline;
+                font-size: 18px;
+                margin-left: 20px;
+            }
+        }
+    }
+}

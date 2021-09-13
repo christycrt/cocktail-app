@@ -1,0 +1,17 @@
+#about {
+    margin: 100px auto;
+    width: 50%;
+
+    .about-title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    p {
+        line-height: 2.5;
+        font-weight: 500;
+    }
+}
