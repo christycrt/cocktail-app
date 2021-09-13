@@ -14,7 +14,7 @@ function SingleCocktail() {
     axios
       .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then(function (response) {
-        if (details) {
+        if (response.data.drinks) {
           let ingredients = [];
           for (let index = 0; index < 15; index++) {
             let ingredient =
@@ -28,7 +28,7 @@ function SingleCocktail() {
         }
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
   return (
     <section id="section-single-cocktail">
@@ -51,6 +51,7 @@ function SingleCocktail() {
                   <img
                     className="img-single-cocktail"
                     src={details.strDrinkThumb}
+                    alt={details.strDrink}
                   />
                 </div>
                 <div className="col-7 cocktail-overall">

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/common/Navbar";
 import Cocktail from "../components/Home/Cocktail";
 import Searchbox from "../components/Home/Searchbox";
 import "../styles/pages/Home.scss";
